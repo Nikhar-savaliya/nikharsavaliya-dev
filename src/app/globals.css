@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #121212;
+  --foreground: #d1d5db;
+  --muted-foreground: #939aa5;
+  --accent: #20b2aa;
+  /* --accent: #ff1493; */
+  /* --accent: #a474f2; */
+  /* --accent: #ff69b4; */
+  /* --accent: #ff4500; */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-mono), Helvetica, sans-serif;
+}
+
+::selection {
+  background-color: #20b2ab42;
+  /* Background color for selected text */
+}
+
+.prose a:not(.anchor) {
+  @apply text-accent no-underline hover:underline;
+}
+
+.prose a.anchor {
+  @apply relative font-bold text-2xl no-underline;
+}
+
+.prose a.anchor::before {
+  @apply absolute -left-4 opacity-0 transition-opacity duration-200 content-['#'];
+}
+
+.prose a.anchor:hover::before {
+  @apply opacity-70;
+}
+
+.prose pre {
+  @apply overflow-x-auto border border-neutral-800 bg-background my-4 rounded-none;
+}
+
+.prose code:not(pre code) {
+  @apply px-1.5 py-0.5 text-sm border border-neutral-800 bg-neutral-900 font-thin text-neutral-200;
+}
+
+.prose code:not(pre code)::before,
+.prose code:not(pre code)::after {
+  content: none;
+}
+
+.prose pre code {
+  @apply p-4 block bg-transparent;
+  border: initial;
+  line-height: 1.6;
+}
+
+.prose code span {
+  @apply font-medium text-gray-200;
+}
