@@ -11,7 +11,7 @@ const page = async () => {
   );
 
   return (
-    <div className="mt-16">
+    <div className="mt-16 px-4 xl:px-0">
       <h2 className="text-3xl font-bold capitalize flex items-center text-white mb-4 ">
         <ScrambledText text="Blogs" />{" "}
         <span className="text-accent ml-1"> ˮ</span>
@@ -19,19 +19,21 @@ const page = async () => {
       <p className="text-muted-foreground mb-12 leading-7">
         Read what I may have to say
       </p>
-      <div className="flex flex-col gap-4 text-sm ">
+      <div className="flex flex-col gap-4 divide-y divide-neutral-800">
         {posts.map((post, index) => (
-          <div key={post.slug} className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <p className="text-accent text-xs -mt-1">{index}</p>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="hover:text-accent py-1"
-              >
+          <div key={post.slug} className="flex flex-col justify-between py-2">
+            <p className="text-accent">#{index}</p>
+            <Link
+              href={`/blog/${post.slug}`}
+              className="hover:text-accent py-1 self-start"
+            >
+              <div className="flex items-center gap-2">
                 {post.metadata.title}
-              </Link>
-            </div>
-            <p>{formatDate(post.metadata.date)}</p>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {formatDate(post.metadata.date)}
+              </p>
+            </Link>
           </div>
         ))}
       </div>

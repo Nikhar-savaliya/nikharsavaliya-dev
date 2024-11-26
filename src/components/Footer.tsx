@@ -18,7 +18,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="mt-16 mb-8">
+    <div className="mt-16 mb-8 mx-4 xl:mx-0">
       <h2 className="text-2xl font-bold mb-6 flex items-center text-white uppercase">
         links <span className="text-accent ml-1"> ˮ</span>
       </h2>

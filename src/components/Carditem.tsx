@@ -3,6 +3,7 @@ import { Icons } from "./Icons";
 
 interface cardItemProps {
   name: string;
+  index: number;
   description: string;
   key_points: string[];
   link: string;
@@ -18,13 +19,14 @@ const CardItem = (project: cardItemProps) => {
       href={project.link}
     >
       <div className="flex items-start justify-between">
-        <h3 className="text-lg font-bold mb-2 uppercase group-hover:text-accent">
+        <h3 className="text-lg gap-1 font-bold mb-2 uppercase group-hover:text-accent">
+          <p className="text-accent text-sm">#{project.index} </p>{" "}
           {project.name}
         </h3>
         <Icons.ArrowUpRight className="text-muted-foreground group-hover:text-accent transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 " />
       </div>
       {/* DESCRIPTION */}
-      <p className="text-sm font-normal text-muted-foreground line-clamp-2">
+      <p className="text-sm font-normal text-muted-foreground">
         {project.description}
       </p>
       {/* FEATURES */}
@@ -43,7 +45,7 @@ const CardItem = (project: cardItemProps) => {
       </ul>
       {/* TECHSTACK */}
       <p className="mt-6 mb-3 text-white font-semibold text-sm">Tech Stack</p>
-      <ul className="flex items-center flex-grow gap-2">
+      <ul className="flex items-center flex-grow gap-2 flex-wrap">
         {project.techstack.map((tech) => {
           return (
             <li

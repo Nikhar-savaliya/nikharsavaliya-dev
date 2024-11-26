@@ -22,8 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable}  antialiased dark`}>
-        <main className="max-w-4xl mx-auto my-4">
+      <body className={`${geistMono.variable} antialiased dark`}>
+        <main className="max-w-4xl mx-auto py-4">
           <Navbar />
           {children}
         </main>
