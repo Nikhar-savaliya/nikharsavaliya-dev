@@ -3,6 +3,21 @@ import { getPosts } from "@/lib/blog-utils";
 import Link from "next/link";
 import React from "react";
 import { formatDate } from "./[slug]/page";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Read what I may have to say",
+  openGraph: {
+    title: "Blog | Nikhar Savaliya",
+    description: "Read what I may have to say",
+    url: "https://nikharsavaliya.me/blog",
+  },
+  twitter: {
+    title: "Blog | Nikhar Savaliya",
+    description: "Read what I may have to say",
+  },
+};
 
 const page = async () => {
   const posts = getPosts().sort(
@@ -13,7 +28,7 @@ const page = async () => {
   return (
     <div className="mt-16 px-4 xl:px-0">
       <h2 className="text-3xl font-bold capitalize flex items-center text-white mb-4 ">
-        <ScrambledText text="Blogs" />{" "}
+        <ScrambledText text="BLOG" />{" "}
         <span className="text-accent ml-1"> ˮ</span>
       </h2>
       <p className="text-muted-foreground mb-12 leading-7">

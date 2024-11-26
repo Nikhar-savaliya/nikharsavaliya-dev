@@ -32,7 +32,7 @@ const Navbar = () => {
           alt="Profile Picture"
           width={72}
           height={72}
-          className="size-12 border-2 border-[#939aa544] aspect-square rounded"
+          className="size-12 border-2 border-[#939aa544] aspect-square rounded-xl"
         />
       </Link>
       <div className="flex flex-wrap">

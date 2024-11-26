@@ -11,7 +11,7 @@ const Header = () => {
           <ScrambledText className="uppercase" text={"nikhar savaliya"} />
         </span>
       </h1>
-      <div className="flex justify-center items-start flex-col gap-1 mt-4 text-muted-foreground">
+      <div className="flex capitalize justify-center items-start flex-col gap-1 mt-4 text-muted-foreground">
         <span className="flex leading-7 items-center justify-start gap-2">
           <Icons.Location className="size-5" />
           Gujarat, India.

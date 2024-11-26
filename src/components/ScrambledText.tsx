@@ -7,7 +7,7 @@ const ScrambledText = ({
   speed = 0.5,
   tick = 1,
   step = 1,
-  scramble = 5,
+  scramble = 7,
   seed = 3,
 }: {
   text: string;
@@ -19,7 +19,7 @@ const ScrambledText = ({
   seed?: number;
 }) => {
   // hook returns a ref
-  const { ref, replay } = useScramble({
+  const { ref } = useScramble({
     text,
     speed,
     tick,
@@ -30,14 +30,7 @@ const ScrambledText = ({
   });
 
   // apply the ref to a node
-  return (
-    <span
-      ref={ref}
-      className={className}
-      onMouseOver={replay}
-      onFocus={replay}
-    />
-  );
+  return <span ref={ref} className={className} />;
 };
 
 export default ScrambledText;
