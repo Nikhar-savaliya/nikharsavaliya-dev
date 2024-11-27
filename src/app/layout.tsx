@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Nikhar Savaliya",
     locale: "en_US",
     type: "website",
-    images: ["./og-img.png"],
+    images: [`/api/og?title=${encodeURIComponent("Nikhar Savaliya")}`],
   },
   robots: {
     index: true,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Nikhar Savaliya",
     card: "summary_large_image",
     description: "Web Developer, Making some things.",
-    images: ["./og-img.png"],
+    images: [`/api/og?title=${encodeURIComponent("Nikhar Savaliya")}`],
     creator: "@nikharx",
   },
 };

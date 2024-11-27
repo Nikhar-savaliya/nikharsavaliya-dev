@@ -11,10 +11,12 @@ export const metadata: Metadata = {
     title: "Projects | Nikhar Savaliya",
     description: "Here are some of the projects I've built",
     url: "https://nikharsavaliya.me/projects",
+    images: [`/api/og?title=${encodeURIComponent("Nikhar's Projects")}`],
   },
   twitter: {
     title: "Projects | Nikhar Savaliya",
     description: "Here are some of the projects I've built",
+    images: [`/api/og?title=${encodeURIComponent("Nikhar's Projects")}`],
   },
 };
 

@@ -2,6 +2,7 @@ import { getPostBySlug } from "@/lib/blog-utils";
 import { notFound } from "next/navigation";
 import React from "react";
 import RenderMdx from "./RenderMdx";
+import { Metadata } from "next";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -16,7 +17,7 @@ const page = async ({ params }: PageProps) => {
   }
 
   return (
-    <div className="mt-16">
+    <div className="mt-16 mx-4 xl:mx-0">
       <h2 className="text-2xl font-bold capitalize pb-4 text-white">
         <span className="">{post.metadata.title}</span>
         <span className="text-accent ml-1">ˮ</span>
@@ -41,3 +42,39 @@ export function formatDate(date: string) {
 }
 
 export default page;
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> => {
+  const slug = (await params).slug;
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  return {
+    title: post.metadata.title,
+    description: post.metadata.description,
+    openGraph: {
+      title: post.metadata.title,
+      description: post.metadata.description,
+      type: "article",
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(post.metadata.title)}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metadata.title,
+      description: post.metadata.description,
+      images: [`/api/og?title=${encodeURIComponent(post.metadata.title)}`],
+    },
+  };
+};

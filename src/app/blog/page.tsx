@@ -12,10 +12,12 @@ export const metadata: Metadata = {
     title: "Blog | Nikhar Savaliya",
     description: "Read what I may have to say",
     url: "https://nikharsavaliya.me/blog",
+    images: [`/api/og?title=${encodeURIComponent("Nikhar's Blog")}`],
   },
   twitter: {
     title: "Blog | Nikhar Savaliya",
     description: "Read what I may have to say",
+    images: [`/api/og?title=${encodeURIComponent("Nikhar's Blog")}`],
   },
 };
 
