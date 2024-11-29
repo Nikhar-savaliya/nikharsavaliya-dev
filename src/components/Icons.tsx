@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const Icons = {
   Location: ({ className }: { className?: string }) => {
     return (
@@ -148,6 +150,39 @@ export const Icons = {
         <path d="M8 8l0 .01"></path>
         <path d="M12 16l0 -5"></path>
         <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+      </svg>
+    );
+  },
+
+  Peerlist: ({ className }: { className: string }) => {
+    return (
+      <Image
+        src={"/peerlist.png"}
+        alt="Peerlist Icon"
+        width={24}
+        height={24}
+        className={className + " grayscale"}
+      />
+    );
+  },
+
+  Youtube: ({ className }: { className: string }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+        <path d="M10 9l5 3l-5 3z" />
       </svg>
     );
   },

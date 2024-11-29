@@ -12,6 +12,27 @@ export const ProjectsData = [
     techstack: ["Next.js", "TailwindCSS", "Mongodb"],
   },
   {
+    id: 1,
+    name: "Ping SaaS",
+    description:
+      "Developed fully functional SaaS that allows you to track your saas events.",
+    key_points: [
+      "PingSaaS allows you to get notification about your SaaS directly to your discord Account",
+      "PingSaaS provides API endpoint for you to use in your SaaS, this endpoint triggers an event in PingSaaS that pushes notification to you in your discord",
+    ],
+    link: "https://github.com/Nikhar-savaliya/PingSaaS",
+    techstack: [
+      "TypeScript",
+      "Next.js",
+      "React Query",
+      "Hono.js",
+      "Prisma",
+      "TailwindCSS",
+      "Postgresql",
+      "Discord.js",
+    ],
+  },
+  {
     name: "Pearl",
     description: "Mern stack blog website inspired by Medium.com",
     key_points: [
