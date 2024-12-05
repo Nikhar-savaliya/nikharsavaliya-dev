@@ -12,7 +12,7 @@ const Footer = () => {
     },
     { link: "https://x.com/nikharx", text: "Twitter/X", Icon: Icons.Twitter },
     {
-      link: "https:/github.com/nikhar-savaliya",
+      link: "https://github.com/nikhar-savaliya",
       text: "github",
       Icon: Icons.Github,
     },
