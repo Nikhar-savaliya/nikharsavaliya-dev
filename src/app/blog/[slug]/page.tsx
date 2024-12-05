@@ -18,15 +18,15 @@ const page = async ({ params }: PageProps) => {
 
   return (
     <div className="mt-16 mx-4 xl:mx-0">
-      <h2 className="text-3xl font-bold capitalize pb-1 text-white">
+      <h2 className="text-3xl font-bold capitalize pb-2 text-white">
         <span className="">{post.metadata.title}</span>
         <span className="text-accent ml-1">ˮ</span>
       </h2>
 
-      <div className="mb-12 flex items-center justify-between text-sm text-gray-400">
+      <div className="mb-12 flex items-center justify-between text-sm text-muted-foreground pb-8 border-b-2 border-border">
         <span>{formatDate(post.metadata.date)}</span>
       </div>
-      <article className="my-16 prose prose-invert max-w-none prose-headings:text-white prose-a:text-white hover:prose-a:underline">
+      <article className="mt-8 mb-16 prose prose-invert max-w-none prose-headings:text-foreground prose-a:text-foreground hover:prose-a:underline">
         <RenderMdx post={post} />
       </article>
     </div>
