@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NextTopLoader from "nextjs-toploader";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const MonoFont = JetBrains_Mono({
   subsets: ["latin"],
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${MonoFont.variable} antialiased dark`}>
+        <GoogleAnalytics gaId="G-BNN3H56CSK" />
         <main className="max-w-4xl mx-auto py-4">
           <NextTopLoader
             color="#939aa5"

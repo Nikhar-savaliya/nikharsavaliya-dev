@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.0.3",
     "@tailwindcss/typography": "^0.5.15",
     "next": "15.0.3",
     "next-mdx-remote": "^5.0.0",
