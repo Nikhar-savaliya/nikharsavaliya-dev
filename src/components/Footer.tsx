@@ -38,6 +38,7 @@ const Footer = () => {
             key={link.link}
             className="flex group my-3 uppercase items-center gap-2 text-muted-foreground"
             href={link.link}
+            target="_blank"
           >
             <span className="font-medium group-hover:text-accent">
               {link.text}

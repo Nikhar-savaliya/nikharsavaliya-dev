@@ -34,7 +34,7 @@ export async function GET(req: Request) {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#121212",
-          fontFamily: "Geist Mono",
+          fontFamily: "JetBrains Mono",
           padding: "40px",
           position: "relative",
         }}
@@ -77,8 +77,8 @@ export async function GET(req: Request) {
       height: 630,
       fonts: [
         {
-          name: "Geist Mono",
-          data: await loadGoogleFont("Geist Mono", text),
+          name: "JetBrains Mono",
+          data: await loadGoogleFont("JetBrains Mono", text),
           style: "normal",
           weight: 600,
         },
