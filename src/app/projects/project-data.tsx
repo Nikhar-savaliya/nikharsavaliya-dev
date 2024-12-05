@@ -3,12 +3,12 @@ export const ProjectsData = [
     id: 1,
     name: "Updates 2k24",
     description:
-      "Led the frontend development of the website for the college tech event Update2k24 in collaboration with the web development team",
+      "Developed the official website for Update2k24 (college tech-fest), coordinating with the web development team to create a comprehensive digital event platform for registrations",
     key_points: [
       "Achieved over 900+ total students registered and 2500+ event registrations",
       "Designed an adaptive mobile layout which improved overall navigation, leading to over 500+ unique users registering for events within the first 2 days of launch",
     ],
-    link: "https://coupdates.in",
+    link: "https://github.com/nikhar-savaliya/update-2k24",
     techstack: ["Next.js", "TailwindCSS", "Mongodb"],
   },
   {

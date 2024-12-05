@@ -1,4 +1,3 @@
-import ScrambledText from "@/components/ScrambledText";
 import { getPosts } from "@/lib/blog-utils";
 import Link from "next/link";
 import React from "react";
@@ -29,8 +28,8 @@ const page = async () => {
 
   return (
     <div className="mt-16 px-4 xl:px-0">
-      <h2 className="text-3xl font-bold capitalize flex items-center text-white mb-4 ">
-        <ScrambledText text="BLOG" />{" "}
+      <h2 className="text-3xl font-bold uppercase flex items-center text-white mb-4 ">
+        blog
         <span className="text-accent ml-1"> ˮ</span>
       </h2>
       <p className="text-muted-foreground mb-12 leading-7">
@@ -39,7 +38,7 @@ const page = async () => {
       <div className="flex flex-col gap-4 divide-y divide-neutral-800">
         {posts.map((post, index) => (
           <div key={post.slug} className="flex flex-col justify-between py-2">
-            <p className="text-accent">#{index}</p>
+            <p className="text-accent text-sm font-bold">#{index}</p>
             <Link
               href={`/blog/${post.slug}`}
               className="hover:text-accent py-1 self-start"

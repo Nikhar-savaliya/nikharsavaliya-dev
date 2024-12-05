@@ -13,7 +13,7 @@ interface cardItemProps {
 const CardItem = (project: cardItemProps) => {
   return (
     <a
-      className="group text-left border border-white/10 p-8 hover:border-accent"
+      className="group text-left border border-border p-8 hover:border-accent bg-background-secondary"
       target="_blank"
       rel="noopener noreferrer"
       href={project.link}
@@ -50,7 +50,7 @@ const CardItem = (project: cardItemProps) => {
           return (
             <li
               key={tech}
-              className="text-sm border border-white/10 bg-neutral-900 px-2 py-1 text-muted-foreground lowercase"
+              className="text-sm border border-border bg-neutral-900 px-2 py-1 text-muted-foreground lowercase"
             >
               {tech}
             </li>

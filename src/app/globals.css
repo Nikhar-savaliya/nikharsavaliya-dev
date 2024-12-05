@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --background: #121212;
-  --foreground: #d1d5db;
-  --muted-foreground: #939aa5;
-  --accent: #20b2aa;
-  /* --accent: #ff1493; */
-  /* --accent: #a474f2; */
-  /* --accent: #ff69b4; */
-  /* --accent: #ff4500; */
+  --background: #f4f6f9;
+  --foreground: #1f2937;
+  --muted-foreground: #4b5563;
+  --accent: #0d9488;
+  --background-secondary: #ffffff;
+  --border: #e5e7eb;
+
+  .dark {
+    --background: #121212;
+    --foreground: #e2e6eb;
+    --muted-foreground: #9ca3af;
+    --accent: #20b2aa;
+    --background-secondary: #1e1e1e;
+    --border: #2c2c2c;
+  }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  border: var(--border);
   font-family: var(--font-mono), Helvetica, sans-serif;
 }
 
 ::selection {
   background-color: #20b2ab42;
-  /* Background color for selected text */
+}
+
+/* animation */
+.transition-element {
+  view-transition-name: foo;
 }
 
 .prose a:not(.anchor) {
@@ -31,7 +43,9 @@ body {
 .prose a.anchor {
   @apply relative font-bold text-2xl no-underline;
 }
-
+.prose hr {
+  @apply border-b border-border;
+}
 .prose a.anchor::before {
   @apply absolute -left-4 opacity-0 transition-opacity duration-200 content-['#'];
 }

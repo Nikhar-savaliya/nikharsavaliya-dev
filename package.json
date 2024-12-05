@@ -12,9 +12,9 @@
     "@tailwindcss/typography": "^0.5.15",
     "next": "15.0.3",
     "next-mdx-remote": "^5.0.0",
+    "nextjs-toploader": "^3.7.15",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "use-scramble": "^2.2.15",
     "yarn": "^1.22.22"
   },
   "devDependencies": {

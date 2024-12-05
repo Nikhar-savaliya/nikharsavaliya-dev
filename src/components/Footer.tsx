@@ -45,9 +45,9 @@ const Footer = () => {
             <div
               data-orientation="horizontal"
               role="none"
-              className="bg-white/10 h-[1px] w-full flex-1"
+              className="bg-border h-px w-full flex-1"
             ></div>
-            <link.Icon className="size-6 group-hover:text-accent" />
+            <link.Icon className="size-6 group-hover:text-accent group-hover:grayscale-0" />
           </Link>
         ))}
       </div>

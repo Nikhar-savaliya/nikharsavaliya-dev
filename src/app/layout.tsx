@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import NextTopLoader from "nextjs-toploader";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-
-const MonoFont = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const MonoFont = JetBrains_Mono({
+  subsets: ["latin"],
   variable: "--font-mono",
-  weight: "100 900",
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -57,6 +50,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${MonoFont.variable} antialiased dark`}>
         <main className="max-w-4xl mx-auto py-4">
+          <NextTopLoader
+            color="#939aa5"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={1.5}
+            crawl={true}
+            showSpinner={false}
+            easing="ease"
+            speed={200}
+            zIndex={1600}
+            showAtBottom={false}
+          />
           <Navbar />
           {children}
         </main>

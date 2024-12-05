@@ -23,17 +23,20 @@ export default function Home() {
 
   const projectItems = [
     {
-      title: "updates 2k24",
+      id: 1,
+      title: "Updates 2k24",
       role: "Team Lead & Frontend developer",
       description:
-        "Led the frontend development of the website for the college tech event Update2k24 in collaboration with the web development team",
-      href: "https://coupdates.in",
+        "Developed the official website for Update2k24 (college tech fest)",
+      href: "https://github.com/nikhar-savaliya/update-2k24",
     },
     {
-      title: "Pearl",
-      role: "develoeper",
-      description: "Mern stack blog website inspired by Medium.com",
-      href: "https://github.com/Nikhar-savaliya/Pearl",
+      id: 2,
+      title: "Ping SaaS",
+      description:
+        "Developed fully functional SaaS that allows you to track your saas' events.",
+      href: "https://github.com/Nikhar-savaliya/PingSaaS",
+      role: "developer",
     },
   ];
 

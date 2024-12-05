@@ -1,15 +1,19 @@
 import { Icons } from "./Icons";
-import ScrambledText from "./ScrambledText";
 
 const Header = () => {
   const age = new Date().getFullYear() - 2003;
 
   return (
     <header className="pb-4 mt-16 px-4 lg:px-0">
-      <h1 className="text-3xl text-white font-bold capitalize">
-        <span className="inline-block">
-          <ScrambledText className="uppercase" text={"nikhar savaliya"} />
+      <h1 className="group relative overflow-hidden text-3xl text-white font-bold capitalize">
+        <span aria-hidden className="inline-block">
+          <p className="transition-all uppercase duration-300 ease-in-out group-hover:-translate-y-full">
+            Nikhar Savaliya
+          </p>
         </span>
+        <p className="transition-all absolute left-0 top-0 duration-300 ease-in-out translate-y-full group-hover:translate-y-0 lowercase">
+          @nikharx
+        </p>
       </h1>
       <div className="flex capitalize justify-center items-start flex-col gap-1 mt-4 text-muted-foreground">
         <span className="flex leading-7 items-center justify-start gap-2">

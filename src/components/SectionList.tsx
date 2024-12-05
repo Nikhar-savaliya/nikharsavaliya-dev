@@ -24,22 +24,22 @@ const SectionList = ({
 }: SectionListProps) => {
   return (
     <section className="mt-16 mb-8 mx-4 xl:mx-0">
-      <h2 className="text-2xl uppercase font-bold pb-4 flex items-center text-white mb-4 border-b border-white/10">
+      <h2 className="text-2xl uppercase font-bold pb-4 flex items-center text-white mb-4 border-b border-border">
         {title} <span className="text-accent ml-1"> ˮ</span>
       </h2>
 
       <div className="space-y-8">
         {items.map((item, index) => (
-          <div key={item.title} className="group pl-2 flex items-start gap-x-2">
-            <p className="text-accent opacity-80 pt-[2px]">#{index}</p>
+          <div key={item.title} className="group pl-2 flex flex-col gap-x-2">
+            <p className="text-accent text-sm font-bold">#{index}</p>
             <Link href={item.href} target="_blank">
-              <h3 className="text-lg font-semibold mb-1 text-white group-hover:text-accent transition-colors duration-200">
+              <h3 className="font-semibold mb-1 text-white group-hover:text-accent">
                 {item.title}
               </h3>
               <p className="text-sm text-gray-400 mb-2">
                 {item.role} {item.period && `(${item.period})`}
               </p>
-              <p className="text-gray-300">{item.description}</p>
+              <p className="text-foreground">{item.description}</p>
             </Link>
           </div>
         ))}
