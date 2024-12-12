@@ -3,7 +3,7 @@ export const ProjectsData = [
     id: 1,
     name: "Updates 2k24",
     description:
-      "Developed the official website for Update2k24 (college tech-fest), coordinating with the web development team to create a comprehensive digital event platform for registrations",
+      "Developed a full-stack web application using Typescript, MongoDB, Express.js, React.js, Node.js.",
     key_points: [
       "Achieved over 900+ total students registered and 2500+ event registrations",
       "Designed an adaptive mobile layout which improved overall navigation, leading to over 500+ unique users registering for events within the first 2 days of launch",

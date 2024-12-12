@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const MonoFont = JetBrains_Mono({
-  subsets: ["latin"],
+const MonoFont = localFont({
+  src: "./fonts/SFMono.ttf",
   variable: "--font-mono",
 });
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://nikharsavaliya.me"),
   title: {
     default: "Nikhar Savaliya",
-    template: "%s | Nikhar Savaliya",
+    template: "%s • Nikhar Savaliya",
   },
   description: "Web Developer, Making some things.",
   openGraph: {
@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${MonoFont.variable} antialiased dark`}>
         <GoogleAnalytics gaId="G-BNN3H56CSK" />
-        <main className="max-w-4xl mx-auto py-4">
+        <main className="max-w-5xl mx-auto py-4">
           <NextTopLoader
             color="#939aa5"
             initialPosition={0.08}

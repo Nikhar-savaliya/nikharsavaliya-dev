@@ -5,11 +5,6 @@ import { Icons } from "./Icons";
 const Footer = () => {
   const links = [
     { link: "mailto:nikhar663@gmail.com", text: "email", Icon: Icons.Mail },
-    {
-      link: "https://peerlist.io/nikharsavaliya",
-      text: "Peerlist",
-      Icon: Icons.Peerlist,
-    },
     { link: "https://x.com/nikharx", text: "Twitter/X", Icon: Icons.Twitter },
     {
       link: "https://github.com/nikhar-savaliya",
@@ -25,6 +20,11 @@ const Footer = () => {
       link: "https://youtube.com/@nikharx",
       text: "youtube",
       Icon: Icons.Youtube,
+    },
+    {
+      link: "https://peerlist.io/nikharsavaliya",
+      text: "Peerlist",
+      Icon: Icons.Peerlist,
     },
   ];
   return (

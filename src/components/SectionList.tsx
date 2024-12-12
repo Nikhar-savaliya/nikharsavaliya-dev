@@ -39,7 +39,9 @@ const SectionList = ({
               <p className="text-sm text-gray-400 mb-2">
                 {item.role} {item.period && `(${item.period})`}
               </p>
-              <p className="text-foreground">{item.description}</p>
+              <p className="text-foreground">
+                {"=>"} {item.description}
+              </p>
             </Link>
           </div>
         ))}

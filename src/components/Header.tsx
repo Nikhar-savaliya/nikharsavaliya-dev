@@ -4,10 +4,10 @@ const Header = () => {
   const age = new Date().getFullYear() - 2003;
 
   return (
-    <header className="pb-4 mt-16 px-4 lg:px-0">
-      <h1 className="group relative overflow-hidden text-3xl text-white font-bold capitalize">
+    <header className="mt-16 px-4 lg:px-0">
+      <h1 className="group relative overflow-hidden text-2xl text-white font-bold capitalize">
         <span aria-hidden className="inline-block">
-          <p className="transition-all uppercase duration-300 ease-in-out group-hover:-translate-y-full">
+          <p className="transition-all uppercase tracking-wide duration-200 ease-in-out group-hover:-translate-y-full">
             Nikhar Savaliya
           </p>
         </span>
@@ -15,15 +15,15 @@ const Header = () => {
           @nikharx
         </p>
       </h1>
-      <div className="flex capitalize justify-center items-start flex-col gap-1 mt-4 text-muted-foreground">
+      <div className="flex capitalize justify-center items-start flex-col gap-1 mt-2 text-muted-foreground">
         <span className="flex leading-7 items-center justify-start gap-2">
           <Icons.Location className="size-5" />
           Gujarat, India.
         </span>
-        <span className="flex leading-7 items-center justify-start gap-2">
+        {/* <span className="flex leading-7 items-center justify-start gap-2">
           <Icons.Work className="size-5" />
           student & Web developer
-        </span>
+        </span> */}
       </div>
       <p className="mt-4 leading-7">
         I&apos;m a {age}-years-old web developer from India. I&apos;m currently

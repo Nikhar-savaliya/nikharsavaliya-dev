@@ -9,14 +9,15 @@ export default function Home() {
       role: "MERN stack Intern",
       period: "aug 2024 - sep 2024",
       description:
-        "Developed application using MERN stack. Implemented 2 Factor-Authenticatios and CRUD operations ",
+        "Developed a full-stack web application using Typescript, MongoDB, Express.js, React.js, Node.js.",
       href: "/",
     },
     {
       title: "Freelancing",
       role: "web developement",
-      period: "may 2023 - aug 2023",
-      description: "Developed A VS code extension for a client",
+      period: "may 2023",
+      description:
+        "Built and delivered a custom VS Code theme tailored to the client's preferences",
       href: "/",
     },
   ];
@@ -27,7 +28,7 @@ export default function Home() {
       title: "Updates 2k24",
       role: "Team Lead & Frontend developer",
       description:
-        "Developed the official website for Update2k24 (college tech fest)",
+        "Developed and deployed the official website for Update2k24, enabling centralized registration for 13 events",
       href: "https://github.com/nikhar-savaliya/update-2k24",
     },
     {
